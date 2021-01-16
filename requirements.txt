@@ -1,0 +1,4 @@
+-e git+https://github.com/Binance-docs/Binance_Futures_python.git#egg=binance-futures
+requests~=2.23.0
+aiohttp==3.7.3
+pyyaml==5.3.1
