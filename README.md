@@ -56,7 +56,7 @@ Type=simple
 User=ec2-user
 Restart=always
 RestartSec=1
-ExecStart=/home/ec2-user/venv/bin/python3 -u /home/ec2-user/tradingview-bot/src/main.py 8080
+ExecStart=/home/ec2-user/venv/bin/python3 -u /home/ec2-user/tradingview-bot/src/main.py --listen 0.0.0.0 --port 8080
 
 [Install]
 WantedBy=multi-user.target
@@ -67,3 +67,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable app.service
 sudo systemctl start app.service
 ```
+
+## Load Balancer
+
+At least 2 instances of the app must be launched behind load balancer. See `./nginx.conf` file.

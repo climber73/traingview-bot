@@ -20,4 +20,4 @@ TICKER_MAPPING = {
     "BTCUSDTPERP": "BTCUSDT",
 }
 
-DRY_RUN = True
+DRY_RUN = False
